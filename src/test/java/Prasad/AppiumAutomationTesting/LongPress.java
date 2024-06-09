@@ -16,7 +16,6 @@ public class LongPress extends BaseTest {
 	public void longPressAction() {
 
 		driver.findElement(AppiumBy.accessibilityId("Views")).click();
-		;
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Expandable Lists\"]")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"1. Custom Adapter\"]")).click();
 		WebElement ele = driver.findElement(By.xpath("//android.widget.TextView[@text=\"People Names\"]"));
