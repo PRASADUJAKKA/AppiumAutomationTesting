@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-29T22:00:41 IST" name="Default suite" finished-at="2024-05-29T22:01:03 IST" duration-ms="21901">
+  <suite started-at="2024-06-09T12:50:47 IST" name="Default suite" finished-at="2024-06-09T12:51:23 IST" duration-ms="35825">
     <groups>
     </groups>
-    <test started-at="2024-05-29T22:00:41 IST" name="Default test" finished-at="2024-05-29T22:01:03 IST" duration-ms="21901">
-      <class name="Prasad.AppiumAutomationTesting.AppiumBasics">
-        <test-method signature="AppiumTest1()[pri:0, instance:Prasad.AppiumAutomationTesting.AppiumBasics@2a65fe7c]" started-at="2024-05-29T22:00:41 IST" name="AppiumTest1" finished-at="2024-05-29T22:01:03 IST" duration-ms="21858" status="PASS">
+    <test started-at="2024-06-09T12:50:47 IST" name="Default test" finished-at="2024-06-09T12:51:23 IST" duration-ms="35825">
+      <class name="Prasad.AppiumAutomationTesting.LongPress">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:Prasad.AppiumAutomationTesting.LongPress@36ebc363]" started-at="2024-06-09T12:50:47 IST" name="configureAppium" finished-at="2024-06-09T12:51:09 IST" duration-ms="22250" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AppiumTest1 -->
-      </class> <!-- Prasad.AppiumAutomationTesting.AppiumBasics -->
+        </test-method> <!-- configureAppium -->
+        <test-method signature="longPressAction()[pri:0, instance:Prasad.AppiumAutomationTesting.LongPress@36ebc363]" started-at="2024-06-09T12:51:09 IST" name="longPressAction" finished-at="2024-06-09T12:51:22 IST" duration-ms="12556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- longPressAction -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Prasad.AppiumAutomationTesting.LongPress@36ebc363]" started-at="2024-06-09T12:51:22 IST" name="teardown" finished-at="2024-06-09T12:51:23 IST" duration-ms="936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Prasad.AppiumAutomationTesting.LongPress -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

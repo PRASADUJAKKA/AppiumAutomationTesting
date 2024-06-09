@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Prasad.AppiumAutomationTesting.AppiumBasics">
+      <class name="Prasad.AppiumAutomationTesting.LongPress">
         <methods>
-          <include name="AppiumTest1"/>
+          <include name="longPressAction"/>
+          <include name="configureAppium"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- Prasad.AppiumAutomationTesting.AppiumBasics -->
+      </class> <!-- Prasad.AppiumAutomationTesting.LongPress -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
