@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Prasad.AppiumAutomationTesting.SwipeGesture">
+      <class name="Prasad.AppiumAutomationTesting.MiscellaneousActionExercise">
         <methods>
-          <include name="scrollAction"/>
+          <include name="Demo1"/>
+          <include name="selectDialogBoxDemo"/>
           <include name="configureAppium"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- Prasad.AppiumAutomationTesting.SwipeGesture -->
+      </class> <!-- Prasad.AppiumAutomationTesting.MiscellaneousActionExercise -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

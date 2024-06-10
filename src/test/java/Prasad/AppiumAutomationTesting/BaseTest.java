@@ -58,6 +58,14 @@ public class BaseTest {
 		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of("elementId",
 				((RemoteWebElement) firstImage).getId(), "direction", direction, "percent", 0.75));
 	}
+	
+   public void dragDropDemo(WebElement dragElement) {
+	   ((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
+			    "elementId", ((RemoteWebElement) dragElement).getId(),
+			    "endX", 630,
+			    "endY", 584
+			));
+   }
 
 	@AfterClass()
 	public void teardown() {
