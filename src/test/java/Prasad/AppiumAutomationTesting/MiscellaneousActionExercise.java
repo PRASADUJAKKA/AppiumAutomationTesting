@@ -1,10 +1,15 @@
 package Prasad.AppiumAutomationTesting;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.DeviceRotation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class MiscellaneousActionExercise extends BaseTest {
 
@@ -107,6 +112,51 @@ public class MiscellaneousActionExercise extends BaseTest {
 		Assert.assertEquals(isChecked2, "false");
 		Assert.assertEquals(isChecked3, "false");
 
+	}
+
+	@Test
+	public void setDeviceRotationDemo() {
+		do {
+			driver.navigate().back();
+			driver.activateApp("io.appium.android.apis");
+		} while ((driver.findElements(AppiumBy.accessibilityId("Preference")).isEmpty()));
+
+		driver.findElement(AppiumBy.accessibilityId("Preference")).click();
+		driver.findElement(AppiumBy.accessibilityId("3. Preference dependencies")).click();
+		driver.findElement(By.xpath("//android.widget.CheckBox[@resource-id=\"android:id/checkbox\"]")).click();
+
+		DeviceRotation dr = new DeviceRotation(0, 0, 90);
+		driver.rotate(dr);
+		driver.findElement(By.xpath(
+				"//android.widget.ListView[@resource-id=\"android:id/list\"]/android.widget.LinearLayout[2]/android.widget.RelativeLayout"))
+				.click();
+		driver.findElement(By.id("android:id/edit")).click();
+		driver.findElement(By.id("android:id/edit")).sendKeys("Prasad's wifi");
+	}
+
+	@Test
+	public void keyEventsDemo() {
+		do {
+			driver.navigate().back();
+			driver.activateApp("io.appium.android.apis");
+		} while ((driver.findElements(AppiumBy.accessibilityId("Preference")).isEmpty()));
+
+		driver.setClipboardText("Prasad's wifi");
+		driver.findElement(AppiumBy.accessibilityId("Preference")).click();
+		driver.findElement(AppiumBy.accessibilityId("3. Preference dependencies")).click();
+		driver.findElement(By.xpath("//android.widget.CheckBox[@resource-id=\"android:id/checkbox\"]")).click();
+		driver.findElement(By.xpath(
+				"//android.widget.ListView[@resource-id=\"android:id/list\"]/android.widget.LinearLayout[2]/android.widget.RelativeLayout"))
+				.click();
+		driver.findElement(By.id("android:id/edit")).click();
+		driver.findElement(By.id("android:id/edit")).sendKeys(driver.getClipboardText());
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+		driver.findElement(By.id("android:id/button1")).click();
+		driver.pressKey(new KeyEvent(AndroidKey.HOME));
+		driver.activateApp("io.appium.android.apis");
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		
+		
 	}
 
 }

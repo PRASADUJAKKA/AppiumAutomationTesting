@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Prasad.AppiumAutomationTesting.MiscellaneousActionExercise">
+      <class name="Prasad.AppiumAutomationTesting.EcommerceTestCase4">
         <methods>
-          <include name="Demo1"/>
-          <include name="selectDialogBoxDemo"/>
-          <include name="configureAppium"/>
           <include name="teardown"/>
+          <include name="goToCartAndAssertPrice"/>
+          <include name="configureAppium"/>
+          <include name="addItemsToCartMultiple"/>
         </methods>
-      </class> <!-- Prasad.AppiumAutomationTesting.MiscellaneousActionExercise -->
+      </class> <!-- Prasad.AppiumAutomationTesting.EcommerceTestCase4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
