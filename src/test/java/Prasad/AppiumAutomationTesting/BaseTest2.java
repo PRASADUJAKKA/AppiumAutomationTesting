@@ -32,7 +32,8 @@ public class BaseTest2 {
 		UiAutomator2Options options = new UiAutomator2Options();
 
 		options.setDeviceName("OnePlus CPH2487");
-
+		options.setChromedriverExecutable(
+				"C:\\\\Users\\\\prasa\\\\Downloads\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
 		options.setApp("\\Users\\prasa\\Downloads\\APKFiles\\resources\\General-Store.apk");
 		driver = new AndroidDriver(new URL("http://0.0.0.0:4723"), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -62,11 +63,11 @@ public class BaseTest2 {
 		((JavascriptExecutor) driver).executeScript("mobile: dragGesture",
 				ImmutableMap.of("elementId", ((RemoteWebElement) dragElement).getId(), "endX", 630, "endY", 584));
 	}
-	
+
 	public Double formattedStringToDouble(String productPrice) {
 		Double price = Double.parseDouble(productPrice.substring(1));
 		return price;
-		
+
 	}
 
 	@AfterClass()

@@ -1,8 +1,10 @@
 package Prasad.AppiumAutomationTesting;
 
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,6 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class EcommerceTestCase4 extends BaseTest2 {
 
@@ -70,5 +74,18 @@ public class EcommerceTestCase4 extends BaseTest2 {
 		driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
 		Thread.sleep(5000);
+		driver.openNotifications();
+		Thread.sleep(5000);
+		Set<String> ss = driver.getContextHandles();
+		for(String s1: ss) {
+			System.out.println(s1);
+		}
+		driver.context("WEBVIEW_com.androidsample.generalstore");
+		driver.findElement(By.name("q")).sendKeys("Prasad Automation");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		driver.context("NATIVE_APP");
+		
 	}
+
 }
